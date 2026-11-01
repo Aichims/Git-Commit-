@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comment faire un commit sur Git ? — Mini-formation pour débutants</title>
+<meta name="description" content="Mini-formation de 16 minutes : vérifier, préparer et enregistrer ses modifications avec Git. 3 modules vidéo, fiche apprenant et quiz.">
+<link rel="stylesheet" href="style.css">
+
+<!-- ====================================================================
+  À FAIRE AVANT DE PUBLIER — cherche ces repères avec Ctrl+F : "TODO"
+  --------------------------------------------------------------------
+  TODO-1  VIDÉOS       : dépose module-1.mp4, module-2.mp4, module-3.mp4
+                         dans le dossier  videos/   (voir les 3 modules plus bas)
+  TODO-2  TALLY        : colle l'identifiant de ton formulaire Tally (section "Quiz")
+  TODO-3  PRIX + ACHAT : remplace le prix et le lien de paiement (section "Tarif")
+  TODO-4  HANDOUT      : le lien de téléchargement fonctionne déjà
+                         (fichier : downloads/Learner_Handout_Git_Commit.pdf)
+  TODO-5  TON NOM      : remplace "Ton nom / pseudo" dans le pied de page
+==================================================================== -->
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav">
+  <div class="container">
+    <a class="logo" href="#top">Git <span>Commit</span></a>
+    <ul>
+      <li><a class="link" href="#apprendre">Ce que tu vas apprendre</a></li>
+      <li><a class="link" href="#modules">Modules</a></li>
+      <li><a class="link" href="#handout">Fiche apprenant</a></li>
+      <li><a class="link" href="#quiz">Quiz</a></li>
+      <li><a class="link" href="#credits">Crédits</a></li>
+    </ul>
+    
+    <a class="btn btn-primary" href="#handout">Telecharger le handout</a>
+  </div>
+</nav>
+
+<!-- ============ HERO (accroche) ============ -->
+<header class="hero" id="top">
+  <div class="container grid">
+    <div>
+      <span class="eyebrow">Mini-formation pour débutants · 16 min</span>
+      <h1>Comment faire un <em>commit</em> sur Git ?</h1>
+      <p class="lead">Une méthode simple et visuelle pour vérifier, préparer et enregistrer tes modifications en confiance : observe, prépare, puis enregistre.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#tarif">Commencer la formation</a>
+        <a class="btn btn-ghost" href="#modules">Voir le programme</a>
+      </div>
+      <ul class="meta">
+        <li>3 modules vidéo</li>
+        <li>Fiche apprenant PDF</li>
+        <li>Quiz de 5 questions</li>
+      </ul>
+    </div>
+    <div class="terminal" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i>&nbsp; demo-commit</div>
+<pre><span class="p">$</span> git status
+<span class="dim">Changes not staged for commit:</span>
+    modified:   index.html
+<span class="dim">Untracked files:</span>
+    Notes.txt
+
+<span class="p">$</span> git add index.html
+<span class="p">$</span> git commit -m "Ajout du paragraphe de bienvenue"
+<span class="ok">[master 3f2a1c9] Ajout du paragraphe de bienvenue</span></pre>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ CE QUE TU VAS APPRENDRE ============ -->
+<section id="apprendre">
+  <div class="container">
+    <span class="eyebrow">Objectifs</span>
+    <h2>À la fin, tu sauras enregistrer ton travail dans l'historique Git.</h2>
+    <p style="color:var(--muted);max-width:44em">Pour les étudiants et débutants qui connaissent les bases de la programmation, ont déjà entendu parler de Git ou GitHub, mais ne savent pas toujours quelle commande utiliser, ni dans quel ordre. Budget : 0 € de logiciel, tout est gratuit.</p>
+    <div class="cards" style="margin-top:28px">
+      <div class="card"><span class="num">01</span><h3>Comprendre</h3><p>L'état des fichiers dans Git, avec <code>git status</code>.</p></div>
+      <div class="card"><span class="num">02</span><h3>Sélectionner</h3><p>Les changements à préparer avant un commit, avec <code>git add</code>.</p></div>
+      <div class="card"><span class="num">03</span><h3>Retrouver</h3><p>Le commit créé dans l'historique, avec <code>git commit -m</code> puis <code>git log --oneline</code>.</p></div>
+    </div>
+    <p style="color:var(--muted);font-size:.92rem;margin-top:20px">À prévoir : un ordinateur avec Git et un terminal (par exemple celui de VS Code). Les branches, merges et workflows avancés ne sont volontairement pas abordés.</p>
+  </div>
+</section>
+
+<!-- ============ MODULES + VIDÉOS ============ -->
+<section id="modules" class="bg-light">
+  <div class="container">
+    <span class="eyebrow">Programme</span>
+    <h2>3 modules, une vidéo chacun.</h2>
+
+    <!-- =============================================================
+         MODULE 1
+         ============================================================= -->
+    <article class="module">
+      <div class="media">
+    
+        <div class="video-box has-video">
+          <iframe src="https://player.vimeo.com/video/1240715425?app_id=122963" allow="fullscreen; picture-in-picture" allowfullscreen title="Module 1"></iframe>
+        </div>
+       
+        <!-- ▲▲▲ FIN VIDÉO MODULE 1 ▲▲▲ -->
+      </div>
+      <div>
+        <span class="tag">Module 1</span><span class="tag"></span>
+        <h3>Vérifier les modifications</h3>
+        <p>Repère les fichiers modifiés et les fichiers non suivis avant de créer un commit.</p>
+        <ul>
+          <li>Lancer <code>git status</code> dans le dossier du projet</li>
+          <li>Lire <em>Changes not staged for commit</em> et <em>Untracked files</em></li>
+          <li>Décider quoi inclure dans le prochain commit</li>
+        </ul>
+        
+      </div>
+    </article>
+
+    <!-- =============================================================
+         MODULE 2
+         ============================================================= -->
+    <article class="module">
+      <div class="media">
+        <!-- ▼▼▼ TODO-1 : VIDÉO DU MODULE 2 ▼▼▼
+             Dépose ta vidéo ici :   videos/module-2.mp4
+             (image d'aperçu facultative : images/module-2.jpg)
+             -->
+      
+        <div class="video-box has-video">
+          <iframe src="https://player.vimeo.com/video/1240705772?app_id=122963" allow="fullscreen; picture-in-picture" allowfullscreen title="Module 2"></iframe>
+        </div>
+        
+        <!-- ▲▲▲ FIN VIDÉO MODULE 2 ▲▲▲ -->
+      </div>
+      <div>
+        <span class="tag">Module 2</span><span class="tag"></span>
+        <h3>Préparer les fichiers</h3>
+        <p>Choisis précisément les fichiers à inclure grâce à la zone de préparation (staging area).</p>
+        <ul>
+          <li>Préparer un fichier précis avec <code>git add index.html</code></li>
+          <li>Comprendre le risque de <code>git add .</code></li>
+          <li>Vérifier le résultat avec <code>git status</code></li>
+        </ul>
+        
+      </div>
+    </article>
+
+    <!-- =============================================================
+         MODULE 3
+         ============================================================= -->
+    <article class="module">
+      <div class="media">
+        <!-- ▼▼▼ TODO-1 : VIDÉO DU MODULE 3 ▼▼▼
+             Dépose ta vidéo ici :   videos/module-3.mp4
+             (image d'aperçu facultative : images/module-3.jpg)
+             -->
+        
+        <div class="video-box has-video">
+          <iframe src="https://player.vimeo.com/video/1240705772?app_id=122963" allow="fullscreen; picture-in-picture" allowfullscreen title="Module 3"></iframe>
+        </div>
+        
+        <!-- ▲▲▲ FIN VIDÉO MODULE 3 ▲▲▲ -->
+      </div>
+      <div>
+        <span class="tag">Module 3</span><span class="tag"></span>
+        <h3>Créer le commit</h3>
+        <p>Enregistre les modifications préparées avec un message clair, puis retrouve-les dans l'historique.</p>
+        <ul>
+          <li>Écrire <code>git commit -m "message"</code> avec un message pertinent</li>
+          <li>Contrôler l'historique avec <code>git log --oneline</code></li>
+          <li>Retirer un fichier avec <code>git restore --staged</code></li>
+        </ul>
+        
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ HANDOUT (téléchargement) ============ -->
+<section id="handout">
+  <div class="container">
+    <div class="download">
+      <div>
+        <span class="eyebrow">Fiche apprenant</span>
+        <h2 style="color:#fff">Télécharge ton handout</h2>
+        <p>La fiche qui accompagne la formation : la méthode en une ligne, les mots clés, les captures de chaque module et l'auto-vérification.</p>
+      </div>
+      <div class="btns">
+        <!-- TODO-4 : clique ici pour télécharger le handout (fichier dans downloads/) -->
+        <a class="btn btn-primary" href="downloads/Learner_Handout_Git_Commit.pdf" download>⬇ Télécharger le handout (PDF)</a>
+        <!-- Aide-mémoire des commandes -->
+        <a class="btn btn-ghost" href="downloads/Aide_Memoire_Commandes_Git.pdf" download>⬇ Aide-mémoire des commandes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIZ TALLY ============ -->
+<section id="quiz" class="bg-light">
+  <div class="container">
+    <span class="eyebrow">Teste-toi</span>
+    <h2>Quiz final : 5 questions</h2>
+    <p style="color:var(--muted)">Vérifie que tu as bien compris : <code>git status</code>, <code>git add</code>, message de commit clair et <code>git log --oneline</code>.</p>
+
+    <div class="tally-wrap">
+      <!-- ▼▼▼ TODO-2 : TON FORMULAIRE TALLY ▼▼▼
+           1) Dans Tally : Share > Embed (ou copie le lien du formulaire).
+           2) Remplace  TON_ID_TALLY  ci-dessous par l'identifiant de ton formulaire
+              (ex. pour https://tally.so/r/wMeDxL  l'identifiant est  wMeDxL ).
+           Le formulaire s'affiche directement dans la page. -->
+      <iframe data-tally-src="https://tally.so/r/9NBOlV"
+              loading="lazy" width="100%" height="420" frameborder="0" title="Quiz Tally"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}</script>
+      <!-- ▲▲▲ FIN TALLY ▲▲▲ -->
+    </div>
+    <p style="margin-top:14px;font-size:.92rem">
+      Le formulaire ne s'affiche pas ?
+      <!-- TODO-2 (bis) : même identifiant ici -->
+      <a href="https://tally.so/r/9NBOlV" target="_blank" rel="noopener">Ouvre-le dans un nouvel onglet</a>.
+    </p>
+  </div>
+</section>
+
+
+</main>
+
+<!-- ============ CRÉDITS / PIED DE PAGE ============ -->
+<footer id="credits">
+  <div class="container">
+    <h2>Crédits : les outils utilisés</h2>
+    <p>Cette formation a été créée avec l'aide d'outils d'IA, puis relue par un humain.</p>
+    <div class="credits">
+      <div class="credit"><strong>Gamma</strong><span>Création des supports et visuels de présentation.</span><a href="https://gamma.app" target="_blank" rel="noopener">gamma.app</a></div>
+      <div class="credit"><strong>HeyGen</strong><span>Génération des vidéos avec avatar IA.</span><a href="https://www.heygen.com" target="_blank" rel="noopener">heygen.com</a></div>
+      <div class="credit"><strong>ChatGPT</strong><span>Aide à la rédaction du script et des contenus.</span><a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a></div>
+      <div class="credit"><strong>Tally</strong><span>Création du quiz et du formulaire.</span><a href="https://tally.so" target="_blank" rel="noopener">tally.so</a></div>
+      <!-- Pour ajouter un outil, copie une ligne "credit" ci-dessus.
+           Ta fiche Concept Sheet cite aussi Claude (mise en forme et reformulation).
+           Si tu l'as utilisé, décommente la ligne suivante :
+      <div class="credit"><strong>Claude</strong><span>Mise en forme et reformulation des documents.</span><a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a></div>
+      -->
+    </div>
+    <div class="legal">
+      © 2026 · <!-- TODO-5 -->Aissatou Mohamadou · Comment faire un commit sur Git ? · Mini-formation pour débutants
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Masque le message "Vidéo à venir" dès qu'une vidéo est bien chargée */
+document.querySelectorAll('[data-video-box]').forEach(function(box){
+  var v = box.querySelector('video');
+  if(!v) return;
+  v.addEventListener('loadeddata', function(){ box.classList.add('has-video'); });
+  v.addEventListener('error', function(){ box.classList.remove('has-video'); }, true);
+});
+</script>
+</body>
+</html>
